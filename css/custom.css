@@ -1,0 +1,42 @@
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.container-nopadding{
+    padding-left: 0rem;
+    padding-right: 0rem;
+    overflow: hidden;
+}
+.contract-directory{
+  padding-right: 0rem;
+}
+
+.chart-area{
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100%;
+}
+
+.myTradingViewContainer {
+  height:980px;
+  width: 510px;
+}
+
+.btn-positive{
+  color: #fff;
+  background-color: #8bcd8b;
+  border-color: #8bcd8b;
+}
+
+.btn-negative{
+  color: #fff;
+  background-color: #e58a87;
+  border-color: #e58a87;
+}
+
+.faq-area{
+  padding-top: 0 !important;
+}
+
+.interaction-area{
+}
