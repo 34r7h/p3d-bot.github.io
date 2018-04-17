@@ -150,64 +150,72 @@
             </div>
           </div>
           <div class="col-xs-3 interaction-area">
-            <div class="input-group">
-            <span class="input-group-btn">
-              <button id="buy-btn-agree" class="btn btn-success btn-default" type="button">I Agree</button>
-            </span>
-            <input type="number" id="agree-purchase-amount" min="0" step="0.01" class="form-control" placeholder="ETH Wager Amount (e.g. 0.5)">
-            </div>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <th scope="row">Value 100 shares</th>
-                  <td>
-                    <div class="poh-sell-red value">ETH</div>
-                    <div class="poh-sell-red-usd value-usd"></div>
-                  </td>
-                <tr>
-                  <th scope="row">My shares</th>
-                  <td>
-                    <div class="red-pill-balance value">Shares</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Total Outstanding</th>
-                  <td class="red-pill-amount value"></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="input-group">
-            <span class="input-group-btn">
-            <button id="buy-btn-disagree" class="btn btn-danger btn-default" type="button">I Disagree</button>
-            </span>
-            <input type="number" id="disagree-purchase-amount" min="0" step="0.01" class="form-control" placeholder="ETH Wager Amount (e.g. 0.5)">
-            </div>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <th scope="row">Value 100 shares</th>
-                  <td>
-                    <div class="poh-sell-blue value">ETH</div>
-                    <div class="poh-sell-blue-usd value-usd"></div>
-                  </td>
-                <tr>
-                  <th scope="row">My shares</th>
-                  <td>
-                    <div class="blue-pill-balance value">Shares</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Total Outstanding</th>
-                  <td class="blue-pill-amount value"></td>
-                </tr>
-              </tbody>
-            </table>
-            <button id="reinvest-btn-agree" type="button" class="btn btn-success btn-positive btn-md btn-block">Put Dividends into Agree</button>
-            <button id="reinvest-btn-disagree" type="button" class="btn btn-danger btn-negative btn-md btn-block"> Put Dividends in Disagree</button>
+            <div  id="winner" class="alert alert-success toshow"> Agree is correct! </div>
+            <div  id="loser" class="alert alert-danger toshow"> Disagree is correct! </div>
+            <div id="agree-area">
+              <div id= "agree-wager" class="input-group">
+              <span class="input-group-btn">
+                <button id="buy-btn-agree" class="btn btn-success btn-default" type="button">Agree</button>
+              </span>
+              <input type="number" id="agree-purchase-amount" min="0" step="0.01" class="form-control" placeholder="ETH Wager Amount (e.g. 0.5)">
+              </div>
               <table class="table">
                 <tbody>
                   <tr>
-                  <th scope="row">Current Share Price</th>
+                    <th scope="row">Value 100 shares (if correct)</th>
+                    <td>
+                      <div class="poh-sell-red value">ETH</div>
+                      <div class="poh-sell-red-usd value-usd"></div>
+                    </td>
+                  <tr>
+                    <th scope="row">My Agree Shares</th>
+                    <td>
+                      <div class="red-pill-balance value">Shares</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total Agree Shares</th>
+                    <td class="red-pill-amount value"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="disagree-area">
+              <div id="disagree-wager" class="input-group">
+              <span class="input-group-btn">
+              <button id="buy-btn-disagree" class="btn btn-danger btn-default" type="button">Disagree</button>
+              </span>
+              <input type="number" id="disagree-purchase-amount" min="0" step="0.01" class="form-control" placeholder="ETH Wager Amount (e.g. 0.5)">
+              </div>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="row">Value 100 shares (if correct)</th>
+                    <td>
+                      <div class="poh-sell-blue value">ETH</div>
+                      <div class="poh-sell-blue-usd value-usd"></div>
+                    </td>
+                  <tr>
+                    <th scope="row">My Disagree Shares</th>
+                    <td>
+                      <div class="blue-pill-balance value">Shares</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total Disagree Shares</th>
+                    <td class="blue-pill-amount value"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="reinvest-area">
+            <button id="reinvest-btn-agree" type="button" class="btn btn-success btn-positive btn-md btn-block">Put Dividends into Agree</button>
+            <button id="reinvest-btn-disagree" type="button" class="btn btn-danger btn-negative btn-md btn-block"> Put Dividends in Disagree</button>
+            </div>
+            <table class="table">
+                <tbody>
+                  <tr>
+                  <th scope="row">New Share Price</th>
                   <td>
                     <div class="poh-buy value"> </div>
                   <div class="poh-buy-usd value-usd"></div>
@@ -233,8 +241,8 @@
                   </tr>
                 </tbody>
               </table>
+            <button id="settle-btn" type="button" class="btn btn-primary btn-md btn-block toshow">Settle (also withdraws dividends)</button>
             <button id="withdraw-btn" type="button" class="btn btn-info btn-md btn-block">Withdraw Dividends</button>
-            <button id="settle-btn" type="button" class="btn btn-primary btn-md btn-block">Settle</button>
             <!-- if user has enough tokens -->
             <table class="table">
               <tbody>
@@ -245,7 +253,9 @@
                   </td>
                 <tr>
                   <th scope="row">Minimum Maker Bonus Req</th>
-                  <td>100 shares</td>
+                  <td>
+                    <div class="stakingRequirement"></div>
+                  </td>
                 </tr>
               </tbody>
             </table>
