@@ -10,7 +10,7 @@
 
     <title>CrystalBall MX</title>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
-  	<link rel="stylesheet" href="/css/alertify.css">
+  	<link rel="stylesheet" href="./css/alertify.css">
   	<script
   		src="https://code.jquery.com/jquery-3.1.1.min.js"
   		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -224,8 +224,8 @@
                   <tr>
                     <th scope="row">My Dividends</th>
                     <td>
-                      <div class="poh-div value">ETH</div>
-                      <div class="poh-div-usd value-usd"></div>
+                      <div class="poh-nonrefdiv value">ETH</div>
+                      <div class="poh-nonrefdiv-usd value-usd"></div>
                     </td>
                   </tr>
                   <tr>
@@ -250,6 +250,7 @@
                   <th scope="row">Referral Bonus</th>
                   <td>
                     <div class="poh-refdiv value">ETH</div>
+                    <div class="poh-refdiv-usd value-usd"></div>
                   </td>
                 <tr>
                   <th scope="row">Minimum Maker Bonus Req</th>
@@ -265,15 +266,13 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script src="./lib/bootstrap.min.js"></script>
-    <script src="/lib/ls.js"></script>
-  	<script src="/lib/alertify.js"></script>
+    <script src="./lib/ls.js"></script>
+  	<script src="./lib/alertify.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js"></script>
-  	<script src="/lib/web3.min.js"></script>
-    <!-- <script src="/lib/buy.js"></script> -->
-    <!-- <script src="/lib/test.js"></script> -->
-    <script src="/lib/powm.js"></script>
+  	<script src="./lib/web3.min.js"></script>
+    <script src="./lib/cbmex.js"></script>
 
   </body>
 </html>
