@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../img/favicon.ico">
+
+    <title>CrystalBall</title>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+  	<link rel="stylesheet" href="../css/alertify.css">
+  	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous">
+  	</script>
+    <script src="../lib/helper.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">🔮 CrystalBall</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#contact">Community</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href=".../navbar-fixed-top/" id="date"></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container-nopadding">
+        <div class="row">
+          <div class="col-xs-2 contract-directory">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Contract</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">4/25</th>
+                  <td>BTC > 9300USD</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-dark">
+              <thead class="thead">
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Result</th>
+                  <th scope="col">Contract</th>
+                </tr>
+              </thead>
+              <!-- <tbody>
+                <tr>
+                  <th scope="row">5/12</th>
+                  <td>T</td>
+                  <td>BTC > 7000USD</td>
+                </tr>
+                <tr>
+                  <th scope="row">5/12</th>
+                  <td>F</td>
+                  <td>SP500 > 1900</td>
+                </tr>
+                <tr>
+                  <th scope="row">5/12</th>
+                  <td>T</td>
+                  <td>BTC Dominance > 52%</td>
+                </tr>
+              </tbody> -->
+            </table>
+          </div>
+          <div class="col-xs-7 chart-area content-area">
+            <h2 class="display-4"><center>Will BTC > 9300 USD by 25 Apr 2018 23:00 (UTC)?</center></h2>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div id="tradingview_75754" style="height: 500px;"></div>
+              <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/COINBASE-BTCUSD/" rel="noopener" target="_blank"><span class="blue-text">BTCUSD</span> <span class="blue-text">chart</span> by TradingView</a></div>
+              <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+              <script type="text/javascript">
+              new TradingView.widget(
+              {
+              "autosize": true,
+              "symbol": "COINBASE:BTCUSD",
+              "interval": "D",
+              "timezone": "Etc/UTC",
+              "theme": "Light",
+              "style": "1",
+              "locale": "en",
+              "toolbar_bg": "#f1f3f6",
+              "enable_publishing": false,
+              "allow_symbol_change": true,
+              "container_id": "tradingview_75754"
+            }
+              );
+              </script>
+            </div>
+            <!-- TradingView Widget END -->
+            <div  id="quoteDisplay" class="alert">Maker link: </div>
+            <div class="jumbotron faq-area jumbotron-fluid">
+              <div class="container">
+                <span class="tokens">
+                </span>
+                <h2 class="display-4">Frequently Asked Questions</h2>
+                <h4 class="display-4">Disclaimer</h4>
+                <p> Interacting with the market is risky. You are not guaranteed to make or lose money. This contract provides a platform for educated investors to leverage their knowledge in a fair, and trustless manner. This site is not responsible for any gains or losses incurred. Use at your own risk.</p>
+                <h4 class="display-4">What is a Binary Option?</h4>
+                <p> A binary option is a bet between two sides on a single outcome. If the outcome occurs, one side makes the other side’s money. </p>
+                <h4 class="display-4">How does this site work?</h4>
+                <p> When you either agree or disagree with the statement, you purchase a share. For every share purchased, the price goes up by .0000001 ETH. Every share purchase pays 10% back to current share holders on both side of the trade. You can withdraw or reinvest these dividends at any time. The sooner you make up your mind the more you make in dividends even if you’re wrong! </p>
+                <h4 class="display-4">When does the contract expire?</h4>
+                <p> The contract always expires on the date listed in the titel. When this happens, the truth is set by the admin, and users can settle their balance. When they settle, all dividends as well as the losing side’s contribution is distributed. If you are on the wrong side of the contract, you can still settle and receive your dividends.</p>
+                <h4 class="display-4">What is Maker’s Bonus?</h4>
+                <p> If you hold more than a certain amount of shares, you have the ability to receive a Maker’s bonus. That means that if a user connects to the site through the link you have provided and participates, you receive 30% of the dividends that would have been distributed to all share holders. This does not affect the size of the incoming transaction, only how the dividends are distributed. The minimum for a maker bonus goes up over time. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3 interaction-area">
+            <div  id="winner" class="alert alert-success toshow"> Agree is correct!</div>
+            <div  id="loser" class="alert alert-danger toshow"> Disagree is correct!</div>
+            <div id="agree-area">
+              <div id= "agree-wager" class="input-group">
+              <span class="input-group-btn">
+                <button id="buy-btn-agree" class="btn btn-success btn-default" type="button">Agree</button>
+              </span>
+              <input type="number" id="agree-purchase-amount" min="0" step="0.01" class="form-control" placeholder="ETH Wager Amount (e.g. 0.5)">
+              </div>
+              <table class="table">
+                <tbody>
+                  <tr class="toHide">
+                    <th scope="row">Probability</th>
+                    <td class="red-pill-probability"></td>
+                  </tr>
+                  <tr class="toHide">
+                    <th scope="row">Wager Multiplier</th>
+                    <td>
+                      <div class="red-pill-odds"></div>
+                    </td>
+                  <tr>
+                    <th scope="row">My Payout</th>
+                    <td>
+                      <div class="redpill-my-payout">ETH</div>
+                      <div class="redpill-my-payout-usd value-usd"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="disagree-area">
+              <div id="disagree-wager" class="input-group">
+              <span class="input-group-btn">
+              <button id="buy-btn-disagree" class="btn btn-danger btn-default" type="button">Disagree</button>
+              </span>
+              <input type="number" id="disagree-purchase-amount" min="0" step="0.01" class="form-control" placeholder="ETH Wager Amount (e.g. 0.5)">
+              </div>
+              <table class="table">
+                <tbody>
+                  <tr class="toHide">
+                    <th scope="row">Probability</th>
+                    <td class="blue-pill-probability"></td>
+                  </tr>
+                  <tr class="toHide">
+                    <th scope="row">Wager Multiplier</th>
+                    <td>
+                      <div class="blue-pill-odds"></div>
+                    </td>
+                  <tr>
+                    <th scope="row">My Payout</th>
+                    <td>
+                      <div class="bluepill-my-payout">ETH</div>
+                      <div class="bluepill-my-payout-usd value-usd"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="reinvest-area">
+            <button id="reinvest-btn-agree" type="button" class="btn btn-success btn-positive btn-md btn-block">Put Dividends into Agree</button>
+            <button id="reinvest-btn-disagree" type="button" class="btn btn-danger btn-negative btn-md btn-block"> Put Dividends in Disagree</button>
+            </div>
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="row">My Dividends</th>
+                    <td>
+                      <div class="poh-nonrefdiv value">ETH</div>
+                      <div class="poh-nonrefdiv-usd value-usd"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Prize Pool</th>
+                    <td>
+                      <div class="prize-pool">ETH</div>
+                      <div class="prize-pool-usd value-usd"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            <button id="settle-btn" type="button" class="btn btn-primary btn-md btn-block toshow">Settle (also withdraws dividends)</button>
+            <button id="withdraw-btn" type="button" class="btn btn-info btn-md btn-block">Withdraw Dividends</button>
+            <!-- if user has enough tokens -->
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Current Referral Bonus</th>
+                  <td>
+                    <div class="poh-refdiv value">ETH</div>
+                    <div class="poh-refdiv-usd value-usd"></div>
+                  </td>
+                <tr class="toHide">
+                  <th scope="row">Wager to activate MakerLink</th>
+                  <td>
+                    <div class="staking-requirement"></div>
+                    <div class="staking-requirement-usd value-usd"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="../lib/bootstrap.min.js"></script>
+    <script src="../lib/ls.js"></script>
+  	<script src="../lib/alertify.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js"></script>
+  	<script src="../lib/web3.min.js"></script>
+    <script src="./contract.js"></script>
+    <script src="../lib/cbmex.js"></script>
+
+  </body>
+</html>
